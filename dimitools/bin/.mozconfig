@@ -1,0 +1,16 @@
+ac_add_options --enable-debug
+
+# Add these lines to your mozconfig to point it at the compiler wrappers
+CC="/usr/lib/icecc/bin/cc"
+CXX="/usr/lib/icecc/bin/c++"
+
+mk_add_options 'export CCACHE_PREFIX=icecc'
+export CC=clang
+export CXX=clang++
+ac_add_options --with-ccache=/usr/bin/ccache
+
+ac_add_options --with-google-api-keyfile=/home/dimi/gkey
+
+mk_add_options AUTOCLOBBER=1
+
+mk_add_options MOZ_MAKE_FLAGS="-j100"

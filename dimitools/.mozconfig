@@ -1,0 +1,11 @@
+# This is for mac
+
+ac_add_options --enable-debug
+
+ac_add_options --with-ccache=/usr/local/bin/ccache
+
+ac_add_options --with-google-api-keyfile=/Users/dlee/.mozbuild/gkey
+
+mk_add_options AUTOCLOBBER=1
+
+mk_add_options MOZ_MAKE_FLAGS="-j16"
